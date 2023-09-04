@@ -1,0 +1,6 @@
+Run via Node.js, in Microsoft Edge web browser 
+If you have Python installed (Python 3.x), you can use Python's built-in HTTP server to create a simple local web server
+python -m http.server
+The game works as intended and discribed in email 
+There should be no errors, or runtime errors
+You can further customize and develop your website by editing the HTML, CSS, and JavaScript files in your project directory.
