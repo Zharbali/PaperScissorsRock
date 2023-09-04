@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your styles.css here -->
+<style>
+        body {
+            background: linear-gradient(to bottom right, #E6E6FA, #9370DB, #87CEEB, #00BFFF); /* Gradient background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            background-repeat: no-repeat; /* Prevent the gradient from repeating */
+            background-attachment: fixed; /* Keep the gradient fixed in the background */
+        }
+
+        #start-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #game-container {
+            display: none; /* Initially hide the game container */
+        }
+
+        #logo {
+            width: 200px; /* Adjust the size as needed */
+            margin-bottom: 20px;
+        }
+
+        #start-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for the game canvas */
+        #gameCanvas {
+            display: block; /* Display the game canvas when the game starts */
+            margin: 0 auto; /* Center the canvas horizontally */
+            border: 2px solid white; /* Add a border to separate from other content */
+        }
+    </style>
+</head>
+
+<body>
+<div id="start-screen">
+    <img id="logo" src="https://th.bing.com/th/id/R.e6b27fa9004261c53918bbbf3cfc0a71?rik=LfTxK3EqOLzxNA&pid=ImgRaw&r=0" alt="Game Logo">
+   <button id="start-button" class="button-85" role="button">Start</button>
+</div>
+<div id="game-container">
+    <canvas id="gameCanvas" width="1300" height="750"></canvas>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const startButton = document.getElementById("start-button");
+        const gameCanvas = document.getElementById("gameCanvas");
+        const startScreen = document.getElementById("start-screen");
+
+        startButton.addEventListener("click", function () {
+            // Hide the start screen
+            startScreen.style.display = 'none';
+
+            // Show the game canvas
+            gameCanvas.style.display = 'block';
+
+            // Call the startGame function to begin your game logic
+            startGame();
+        });
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
